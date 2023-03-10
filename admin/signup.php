@@ -7,21 +7,31 @@ if (isset($_POST['submit'])) {
     $name = $_POST['name'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    $stmt = mysqli_prepare($conn, "INSERT INTO `admin_account`(`name`, `user_admin`, `user_password`) VALUES (?, ?, ?)");
-    mysqli_stmt_bind_param($stmt, "sss", $name, $username, $password);
+    $usr = $conn->query("SELECT user_admin FROM admin_account WHERE 1");
+    $usernameValidation = $usr->fetch_assoc()['user_admin'];
 
+    if ($username != $usernameValidation) {
 
-    mysqli_stmt_execute($stmt);
+        $stmt = mysqli_prepare($conn, "INSERT INTO `admin_account`(`name`, `user_admin`, `user_password`) VALUES (?, ?, ?)");
+        mysqli_stmt_bind_param($stmt, "sss", $name, $username, $password);
 
-    // Close statement and connection
-    mysqli_stmt_close($stmt);
-    mysqli_close($conn);
+        mysqli_stmt_execute($stmt);
 
-    // Redirect user to confirmation page
-    header('Location: administrator.php');
-    exit();
+        // Close statement and connection
+        mysqli_stmt_close($stmt);
+        mysqli_close($conn);
+
+        header("Location: dashboard.php?success=Account has been created");
+
+        exit();
+    } else {
+
+        return null;
+    }
+
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +43,7 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="../dist/output.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../dist/header.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
@@ -52,10 +62,9 @@ if (isset($_POST['submit'])) {
                     ☰
                 </button>
                 <nav class="hidden sm:block space-x-8 text-xl font-semibold" aria-label="main">
-                    <a href="../index.html#food" class="hover:opacity-90">Foods</a>
-                    <a href="productlist.html" class="hover:opacity-90">Our Products</a>
-                    <a href="../index.html#contacts" class="hover:opacity-90">Contacts</a>
-                    <a href="../index.html#about" class="hover:opacity-90">About Us</a>
+                    <a href="dashboard.php#table1" class="hover:opacity-90">Table</a>
+                    <a href="dashboard.php#upload" class="hover:opacity-90">Upload</a>
+                    <a href="logout.php">Logout</a>
                 </nav>
             </div>
         </section>
@@ -63,7 +72,8 @@ if (isset($_POST['submit'])) {
 
     <main class="max-w-14xl">
         <section class="h-screen ">
-            <div class=" w-full sm:w-1/2 bg-white py-6 p-9 rounded-3xl shadow-2xl m-auto sm:mt-14">
+            <div
+                class=" m-auto w-full sm:w-1/4 bg-white py-6 p-9 rounded-3xl shadow-2xl sm:mt-14 flex flex-col items-center justify-center">
                 <img src="../img/burger.png" alt="product1" class="w-1/4 mb-6 rounded-xl sm:w-1/4 m-auto"
                     id="product-img-3">
                 <h3 class="font-['Poppins'] font-bold text-3xl text-center text-orange-500 px-4" id="product-title-1">
@@ -72,38 +82,34 @@ if (isset($_POST['submit'])) {
                 <p class="font-['Poppins'] text-gray-600 text-lg mt-3 mx-2 text-center">Create your Administrator <br>
                     Account to have a permission to edit product details.</p>
                 <br>
-
-                <div class="m-auto">
-
-                    <form action="" method="POST" id="login-form">
-                        <label for="first_name"
-                            class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Create
+                <div class="">
+                    <form action="" method="POST" id="sign-up-form">
+                        <label for="first_name" class="block text-lg font-medium text-gray-900">Create
                             Username</label>
                         <input type="text" name="username" id="username"
-                            class="font-['Poppins'] bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg block sm:w-1/2 w-1/2"
+                            class="font-['Poppins'] bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg block w-full"
                             placeholder="Username" required>
 
                         <label for="first_name"
-                            class="font-['Poppins'] block mb-2 text-lg mt-5 font-medium text-gray-900 dark:text-white">Create
+                            class="font-['Poppins'] block text-lg mt-5 font-medium text-gray-900 dark:text-white">Create
                             Password</label>
                         <input type="password" name="password" id="password"
-                            class="font-['Poppins'] bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg block w-1/2 sm:w-1/2"
+                            class="font-['Poppins'] bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg block w-full"
                             placeholder="Password" required>
 
                         <label for="first_name"
-                            class="font-['Poppins'] block mb-2 text-lg mt-5 font-medium text-gray-900 dark:text-white">Enter
+                            class="font-['Poppins'] block text-lg mt-5 font-medium text-gray-900 dark:text-white">Enter
                             Your Fullname</label>
-                        <input type="text" name="name" id="password"
-                            class="font-['Poppins'] bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg block w-1/2 sm:w-1/2"
+                        <input type="text" name="name" id="name"
+                            class="font-['Poppins'] bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg block w-full"
                             placeholder="Fullname" required>
-
-                        <input type="submit" name="submit" id="login"
-                            class="text-center bg-orange-500 text-white py-2 px-4 w-1/4  rounded-lg font-semibold mt-4 hover:bg-orange-300 focus:scale-95 transition-all duration-200 ease-out"
-                            value="Submit"></input>
+                        <div class="flex flex-col justify-center items-center my-2">
+                            <input type="submit" name="submit" id="login"
+                                class="text-center bg-orange-500 text-white py-2 px-4 w-full sm:w-full rounded-lg font-semibold mt-4 hover:bg-orange-300 focus:scale-95 transition-all duration-200 ease-out"
+                                value="Submit"></input>
+                        </div>
                     </form>
-
                 </div>
-
             </div>
         </section>
     </main>
