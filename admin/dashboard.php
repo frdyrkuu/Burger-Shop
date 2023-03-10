@@ -67,7 +67,7 @@ if (isset($_FILES['picture']) && isset($_POST['title'])) {
                     ☰
                 </button>
                 <nav class="hidden sm:block space-x-8 text-xl font-semibold" aria-label="main">
-                    <a href="#table" class="hover:opacity-90">Table</a>
+                    <a href="#table1" class="hover:opacity-90">Table</a>
                     <a href="#upload" class="hover:opacity-90">Upload</a>
                     <a href="logout.php">Logout</a>
                 </nav>
@@ -80,13 +80,13 @@ if (isset($_FILES['picture']) && isset($_POST['title'])) {
         <section class="font-['Poppins'] my-5" id="table1">
             <div
                 class="w-full sm:w-1/2 flex flex-col bg-white py-6 p-9 rounded-3xl shadow-2xl m-auto sm:mt-14 items-center justify-center">
-                <h1 class="text-4xl font-bold text-orange-500">Data Table</h1>
+                <h1 class="text-4xl font-bold text-orange-500">Administrator Dashboard</h1>
                 <h2 class="font-['Poppins'] font-semibold text-3xl text-center text-orange-500 px-4 my-5"
                     id="product-title-1">
                     <?php echo "Welcome," . " " . $_SESSION['name']; ?>
                 </h2>
             </div>
-            <div class="w-full h-96 sm:w-1/2 flex flex-col bg-white py-6 p-9 rounded-3xl shadow-2xl m-auto sm:mt-5 items-center justify-center">
+            <div class="w-full h-96 sm:w-1/2 flex flex-col py-6 p-9 rounded-3xl m-auto sm:mt-5 items-center justify-center">
                 <div class="overflow-x-auto">
                     <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                         <div class="shadow border-b border-gray-200 sm:rounded-lg  m-auto">
@@ -126,8 +126,8 @@ if (isset($_FILES['picture']) && isset($_POST['title'])) {
         <!-- SECTION FOR UPLOAD -->
         <section class="h-1/2" id="upload">
             <div class="w-full sm:w-1/2 flex flex-col bg-white py-6 p-9 rounded-3xl shadow-2xl m-auto sm:mt-14">
-                <h1 class="font-['Poppins'] font-bold text-4xl text-center text-orange-500 px-4" id="product-title-1">
-                    Admin Dashboard
+                <h1 class="font-['Poppins'] font-bold text-4xl text-center text-orange-500 px-4 my-5" id="product-title-1">
+                    Upload Image and Update Product
                 </h1>
 
                 <h2 class="font-['Poppins'] font-light text-2xl text-center text-orange-500 px-4">Upload Image Here
