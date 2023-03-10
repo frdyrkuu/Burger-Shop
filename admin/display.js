@@ -16,7 +16,7 @@ $(document).ready(function () {
                 htmlTable += `
                 <tr>
                      <td class="px-6 py-4 whitespace-nowrap">
-                         <div class="text-sm font-medium text-gray-900">
+                         <div class="text-sm font-medium text-orange-500">
                          ${product.title}
                          </div>
                      </td>

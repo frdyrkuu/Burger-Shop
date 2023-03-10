@@ -21,7 +21,7 @@ $(document).ready(function () {
                 
                 if (product.category == "burger") {
                     htmlCodeBurger += `
-                    <div class="h-1/4 sm:w-1/4 sm:h-1/4 justify-center items-center bg-white py-6 rounded-3xl shadow-2xl mx-5 my-5">
+                    <div class="h-1/4 sm:w-1/4 sm:h-1/4 justify-center items-center bg-white py-6 rounded-3xl shadow-2xl mx-4 my-5">
                     <img src="upload/${product.img}" alt="${product.title}">
                     <h2 class="text-center text-orange-500 font-bold text-2xl">${product.title}</h2>
                     <p class="text-center mx-2">${product.description}</p>
