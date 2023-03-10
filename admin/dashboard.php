@@ -81,12 +81,12 @@ if (isset($_FILES['picture']) && isset($_POST['title'])) {
             <div
                 class="w-full sm:w-3/4 flex flex-col bg-white py-6 p-9 rounded-3xl shadow-2xl m-auto sm:mt-14 items-center justify-center">
                 <h1 class="text-4xl font-bold text-orange-500 text-center sm:text-center">Administrator Dashboard</h1>
-                <h2 class="font-['Poppins'] font-semibold text-3xl text-center text-orange-500 px-4 my-5"
+                <h2 class="font-['Poppins'] font-semibold text-3xl text-center text-orange-500 px-4 my-2"
                     id="product-title-1">
                     <?php echo "Welcome," . " " . $_SESSION['name']; ?>
                 </h2>
                 <div
-                    class="w-full h-96 sm:w-full flex flex-col py-6 p-9 rounded-3xl m-auto sm:mt-5 items-center justify-center sm:text-sm  overflow-x-hidden">
+                    class="w-full h-96 sm:w-full  flex-col py-6 p-9 rounded-3xl m-auto sm:mt-5 items-center justify-center sm:text-sm  overflow-x-hidden hidden sm:flex">
                     <div class="py-2 align-middle inline-block min-w-3/4 sm:px-6 -ml-6 lg:px-8 overflow-y-scroll">
                         <div class="shadow border-b border-gray-200 sm:rounded-lg  m-auto">
                             <table class="min-w-full divide-y divide-gray-200">
@@ -128,8 +128,8 @@ if (isset($_FILES['picture']) && isset($_POST['title'])) {
                         </div>
                     </div>
                 </div>
+                <p class="text-gray-400 text-sm hidden sm:flex">Note: You can only edit and delete content from the table using desktop.</p>
             </div>
-
         </section>
 
 
