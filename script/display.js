@@ -15,10 +15,7 @@ $(document).ready(function () {
             for (let i = 0; i < jsonData.length; i++) {
                 const product = jsonData[i];
 
-
-                console.log(product.img);
-
-                
+                        
                 if (product.category == "burger") {
                     htmlCodeBurger += `
                     <div class="h-1/4 sm:w-1/4 sm:h-1/4 justify-center items-center bg-white py-6 rounded-3xl shadow-2xl mx-4 my-5">

@@ -952,12 +952,36 @@ video {
   align-self: center;
 }
 
+.overflow-hidden{
+  overflow: hidden;
+}
+
+.overflow-clip{
+  overflow: clip;
+}
+
+.overflow-visible{
+  overflow: visible;
+}
+
+.overflow-scroll{
+  overflow: scroll;
+}
+
 .overflow-x-auto{
   overflow-x: auto;
 }
 
 .overflow-y-auto{
   overflow-y: auto;
+}
+
+.overflow-x-hidden{
+  overflow-x: hidden;
+}
+
+.overflow-y-hidden{
+  overflow-y: hidden;
 }
 
 .overflow-y-scroll{
@@ -1356,6 +1380,10 @@ video {
 }
 
 @media (min-width: 640px){
+  .sm\:m-auto{
+    margin: auto;
+  }
+
   .sm\:-mx-6{
     margin-left: -1.5rem;
     margin-right: -1.5rem;
@@ -1447,6 +1475,18 @@ video {
     border-radius: 0.5rem;
   }
 
+  .sm\:p-9{
+    padding: 2.25rem;
+  }
+
+  .sm\:p-8{
+    padding: 2rem;
+  }
+
+  .sm\:p-4{
+    padding: 1rem;
+  }
+
   .sm\:px-4{
     padding-left: 1rem;
     padding-right: 1rem;
@@ -1460,6 +1500,16 @@ video {
   .sm\:py-2{
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+  }
+
+  .sm\:py-6{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .sm\:py-3{
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
 
   .sm\:text-center{
@@ -1489,6 +1539,11 @@ video {
   .sm\:text-lg{
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .sm\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 

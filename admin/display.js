@@ -9,10 +9,7 @@ $(document).ready(function () {
 
             for (let i = 0; i < jsonData.length; i++) {
                 const product = jsonData[i];
-
-
-                console.log(product.img);
-
+        
                 htmlTable += `
                 <tr>
                      <td class="px-6 py-4 whitespace-nowrap">
