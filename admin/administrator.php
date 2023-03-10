@@ -22,7 +22,7 @@ include 'check_auth.php';
 <body class="body">
 
     <!-- HEADER -->
-    <header class="bg-orange-900 text-white sticky top-0 z-10">
+    <header class="bg-orange-900 text-white sticky top-0 z-10 font-['Poppins']">
         <section class="max-w-7xl mx-auto p-4 flex justify-between items-center">
             <h1 class="text-4xl font-bold font-['Poppins']">
                 <a href="../index.html"><span class="text-orange-500">bu</span>rger dungeon.</a>

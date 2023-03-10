@@ -1452,6 +1452,16 @@ video {
     padding-bottom: 0.5rem;
   }
 
+  .sm\:px-8{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .sm\:py-4{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   .sm\:text-center{
     text-align: center;
   }
