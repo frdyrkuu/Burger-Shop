@@ -725,6 +725,14 @@ video {
   margin-left: 24rem;
 }
 
+.-ml-4{
+  margin-left: -1rem;
+}
+
+.-ml-6{
+  margin-left: -1.5rem;
+}
+
 .block{
   display: block;
 }
@@ -958,6 +966,10 @@ video {
 
 .overflow-y-auto{
   overflow-y: auto;
+}
+
+.overflow-x-hidden{
+  overflow-x: hidden;
 }
 
 .overflow-y-scroll{
@@ -1421,6 +1433,14 @@ video {
     width: 100%;
   }
 
+  .sm\:w-96{
+    width: 24rem;
+  }
+
+  .sm\:w-3\/4{
+    width: 75%;
+  }
+
   .sm\:flex-row{
     flex-direction: row;
   }
@@ -1460,6 +1480,11 @@ video {
   .sm\:py-4{
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+  .sm\:px-2{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .sm\:text-center{
