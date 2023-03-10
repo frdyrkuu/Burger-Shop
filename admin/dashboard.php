@@ -50,6 +50,7 @@ if (isset($_FILES['picture']) && isset($_POST['title'])) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <script src="display.js"></script>
 
 </head>
 
@@ -76,7 +77,7 @@ if (isset($_FILES['picture']) && isset($_POST['title'])) {
 
     <main class="max-w-14xl mx-auto">
 
-        <section class="h-1/2 font-['Poppins'] my-5"  id="table">
+        <section class="h-1/2 font-['Poppins'] my-5" id="table1">
             <div
                 class="w-full sm:w-1/2 flex flex-col bg-white py-6 p-9 rounded-3xl shadow-2xl m-auto sm:mt-14 items-center justify-center">
                 <h1 class="text-4xl font-bold text-orange-500">Data Table</h1>
@@ -84,6 +85,39 @@ if (isset($_FILES['picture']) && isset($_POST['title'])) {
                     id="product-title-1">
                     <?php echo "Welcome," . " " . $_SESSION['name']; ?>
                 </h2>
+                <div class="flex flex-col">
+                    <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                        <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                            <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg  m-auto ">
+                                <table class="min-w-full divide-y divide-gray-200">
+                                    <thead class="bg-gray-50">
+                                        <tr>
+                                            <th scope="col"
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                Title
+                                            </th>
+                                            <th scope="col"
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                Description
+                                            </th>
+                                            <th scope="col"
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                Category
+                                            </th>
+                                            <th scope="col"
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                Image
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-200" id="table">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -151,6 +185,7 @@ if (isset($_FILES['picture']) && isset($_POST['title'])) {
     </main>
     <script src="image.js"></script>
     <script src="upload.js"></script>
+
 </body>
 
 </html>
