@@ -128,7 +128,8 @@ if (isset($_FILES['picture']) && isset($_POST['title'])) {
                         </div>
                     </div>
                 </div>
-                <p class="text-gray-400 text-sm hidden sm:flex">Note: You can only edit and delete content from the table using desktop.</p>
+                <p class="text-gray-400 text-sm hidden sm:flex">Note: You can only edit and delete content from the
+                    table using desktop.</p>
             </div>
         </section>
 

@@ -34,15 +34,15 @@ $(document).ready(function () {
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
                     <div class="text-sm text-gray-500">
-                        ${product.id}
+                         ${product.id}
                     </div>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
                     <a href="/edit/${product.id}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
-                    <form action="" method="">
-                        <button type="submit" class="text-red-600 hover:text-red-900">Delete</button>
+                    <form action="" method="POST">
+                        <input type="submit" name="delete" class="text-red-600 hover:text-red-900" value="Delete"></input>
                     </form>
                 </td>
             </tr>
