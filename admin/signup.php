@@ -1,8 +1,7 @@
 <?php
 include('connection.php');
 
-if (isset($_POST['submit'])) {
-
+if (isset($_POST['submit'])) { 
     $username = $_POST['username'];
     $name = $_POST['name'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
