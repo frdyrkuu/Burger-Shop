@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Dungeon</title>
+
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="dist/header.css">
+
+
+</head>
+
+<body class="body min-h-screen">
+
+    <!-- HEADER -->
+    <header class="bg-orange-900 text-white sticky top-0 z-50">
+        <section class="max-w-7xl mx-auto p-4 flex justify-between items-center">
+            <h1 class="text-4xl font-bold font-['Poppins']">
+                <a href="index.html"><span class="text-orange-500">bu</span>rger dungeon.</a>
+            </h1>
+            <div>
+                <button id="mobile-open-button" class="text-3xl sm:hidden focus:outline-none">
+                    ☰
+                </button>
+                <nav class="hidden sm:block space-x-8 text-xl font-semibold" aria-label="main">
+                    <a href="#food" class="hover:opacity-90">Foods</a>
+                    <a href="productlist.html" class="hover:opacity-90">Our Products</a>
+                    <a href="#contacts" class="hover:opacity-90">Contacts</a>
+                    <a href="#about" class="hover:opacity-90">About Us</a>
+                </nav>
+            </div>
+        </section>
+    </header>
+
+    <!-- END HEADER -->
+
+    <!-- MAIN START -->
+    <main class="max-w-7xl mx-auto">
+
+        <!-- START OF LANDING PAGE -->
+        <section class="flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-4 mb-12">
+            <article class="sm:w-1/2">
+                <h2 class="font-['Poppins'] text-6xl font-extrabold text-center sm:text-6xl text-orange-500">
+                    Welcome to <span class="text-orange-900">bu</span>rger dungeon.
+                </h2>
+                <br>
+                <h2 class="font-['Poppins'] text-4xl font-semibold text-center sm:text-4xl text-orange-500">
+                    Hungry? Try <span class="text-yellow-800 dark:text-yellow-700 font-normal">Our Burgers Made
+                    </span>
+                    with Half Pound Patties.
+                </h2>
+                <h3 class="font-['Poppins'] text-1xl font-thin text-center sm:text-2xl text-gray-600">
+                    <br>
+                    “Tasty, delicious, and has me craving more on the first bite.”
+                    to “Juicy, mouthwatering, tasty, and everything
+                    you’d ever want to savor.”
+                </h3>
+                <br>
+            </article>
+            <img class="w-11/12 sm:w-5/4 animate-waving-hand" src="img/burger.png" alt="burger">
+        </section>
+
+        <div class="flex flex-col-reverse justify-center sm-flex-row  items-center -my-20">
+            <a href="#food"
+                class="font-['Poppins'] bg-orange-500 hover:bg-orange-400 text-white font-semibold py-4 px-8 sm:py-2 sm:px-4 text-3xl border-b-4 border-orange-700 hover:border-orange-50 rounded-full animate-bounce">
+                ▼</a>
+        </div>
+        <!-- END LANDING PAGE -->
+
+        <hr class="mx-auto bg-orange-900 w-1/2 h-1 mt-32">
+
+        <!-- START PRODUCTS -->
+        <section id="food" class="p-6 my-1 justify-center items-center">
+            <h2
+                class="font-['Poppins'] text-4xl font-extrabold text-center sm:text-7xl mb-6 my-24 text-orange-500 dark:text-slate-900">
+                The Mythical 3 <span class="text-orange-900">Bu</span>rgers
+            </h2>
+            <ul class="list-none mx-auto my-12 flex flex-col sm:flex-row items-center gap-8">
+
+                <!-- CARD 1 -->
+                <li class=" w-full sm:w-5/6 flex flex-col items-center bg-white py-6 rounded-3xl shadow-2xl">
+                    <img src="img/img1.jpg" alt="product1" class="w-3/4 mb-6 rounded-xl" id="product-img-1">
+                    <h3 class="font-['Poppins'] font-bold text-3xl text-center text-orange-500 px-4"
+                        id="product-title-1">
+                        Dungeon à la King
+                    </h3>
+                    <p class="font-['Poppins'] text-gray-600 text-lg mt-3 mx-2 text-center">Try this Dungeon à la King
+                        to experince becoming a king!</p>
+                    <p class="font-['Poppins'] text-gray-600 text-xl mt-3 mx-2 text-center hidden " id="product-desc-1">
+                        The
+                        Dungeon à la King burger is the ultimate indulgence for burger lovers. This burger is fit for
+                        royalty, with a juicy, flame-grilled beef patty that's perfectly seasoned and topped with a
+                        generous helping of melted cheese, crispy bacon, and sautéed mushrooms. The burger is then
+                        finished off with a dollop of tangy aioli sauce, all served on a fresh brioche bun.</p>
+                    <button type="button" id="prev1"
+                        class="showmodal1  text-center bg-orange-500 text-white py-2  w-1/2 rounded-lg font-semibold mt-4 hover:bg-orange-300 focus:scale-95 transition-all duration-200 ease-out">Preview</button>
+                </li>
+
+                <!-- CARD 2 -->
+                <li class=" w-full sm:w-5/6 flex flex-col items-center bg-white py-6 rounded-3xl shadow-2xl">
+                    <img src="img/img2.jpg" alt="product1" class="w-3/4 mb-6 rounded-xl" id="product-img-2">
+                    <h3 class="font-['Poppins'] font-bold text-3xl text-center text-orange-500 px-4"
+                        id="product-title-2"> Double Sheesh`
+                        Burger
+                    </h3>
+                    <p class="font-['Poppins'] text-gray-600 text-lg mt-3 mx-2 text-center">
+                        You can just say "Sheeesh" at the delicious taste</p>
+                    <p class="font-['Poppins'] text-gray-600 text-lg mt-3 mx-2 text-center hidden" id="product-desc-2">
+                        The Double Sheesh` Burger is bursting with flavor and is complemented by a range of tasty
+                        toppings, including fresh lettuce, tomato, onion, and tangy pickles. To give the burger an extra
+                        kick, a drizzle of creamy garlic sauce is added, making it the perfect combination of savory and
+                        tangy flavors.</p>
+                    <button type="button" id="prev2"
+                        class="showmodal2 text-center bg-orange-500 text-white py-2  w-1/2 rounded-lg font-semibold mt-4 hover:bg-orange-300 focus:scale-95 transition-all duration-200 ease-out">Preview</button>
+                </li>
+
+                <!-- CARD 3 -->
+
+                <li class="w-full sm:w-5/6 flex flex-col items-center bg-white py-6 rounded-3xl shadow-2xl">
+                    <img src="img/img3.jpg" alt="product1" class="w-3/4 mb-6 rounded-xl" id="product-img-3">
+                    <h3 class="font-['Poppins'] font-bold text-3xl text-center text-orange-500 px-4"
+                        id="product-title-3"> Veggie à la Queen
+                    </h3>
+                    <p class="font-['Poppins'] text-gray-600 text-lg mt-3 mx-2 text-center">
+                        Vegetarian burger fit for royalty with avocado, garlic mayo, and veggies.
+                    </p>
+                    <p class="font-['Poppins'] text-gray-600 text-lg mt-3 mx-2 text-center hidden" id="product-desc-3">
+                        At the
+                        heart of the Veggie à la Queen burger is a mouth-watering vegetable patty, made with a flavorful
+                        blend of fresh vegetables and herbs. The patty is then topped with creamy avocado, crisp
+                        lettuce, juicy tomato, and tangy pickles, all nestled between two soft and fluffy buns.</p>
+                    <button href="preview.html" type="button" id="prev3"
+                        class="showmodal3 text-center bg-orange-500 text-white py-2  w-1/2 rounded-lg font-semibold mt-4 hover:bg-orange-300 focus:scale-95 transition-all duration-200 ease-out">Preview</button>
+                </li>
+
+                <!-- MODALS -->
+                <div class="modal h-screen w-full fixed overflow-y-auto left-0 top-0 hidden justify-center items-center bg-black bg-opacity-50 inset-0 z-50"
+                    id="modal">
+                    <div class="bg-white rounded-2xl shadow-lg w-3/4 sm:w-1/3 z-50 inset-0">
+                        <div class="border-b px-4 py-2">
+                            <h3 class="product-title font-['Poppins'] font-bold text-3xl text-center text-orange-500 px-4"
+                                id="">
+                            </h3>
+                            <img src="" alt="product1" class="product-img w-3/4 sm:w-1/2 mb-6 rounded-xl m-auto mt-6"
+                                id="product-img">
+                        </div>
+
+                        <div>
+                            <p
+                                class="product-desc p-3 font-['Poppins'] text-gray-600 text-xs sm:text-lg mt-3 mx-2 text-center">
+                            </p>
+                        </div>
+                        <div class="flex justify-end items-center w-100 border-t p-3">
+                            <button type="button" class="close-modal text-center bg-orange-500 text-white py-2  w-1/3 rounded-lg font-semibold
+                            hover:bg-orange-300 focus:scale-95 transition-all 
+                            duration-200 ease-out m-auto">Okay</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- END OF MODAL -->
+
+        </section>
+
+        <div class="flex flex-col-reverse justify-center sm-flex-row  items-center">
+            <a href="productlist.html"
+                class="font-['Poppins'] bg-orange-500 hover:bg-orange-400 text-white font-semibold py-2 px-8 text-xl border-b-4 border-orange-700 hover:border-orange-50 rounded-full">
+                See More</a>
+        </div>
+
+        <!-- END PRODUCTS -->
+
+        <hr class="mx-auto bg-orange-900 w-1/2 h-1 my-32">
+
+        <!-- CONTACTS -->
+        <section id="contacts" class="p-6 my-12 justify-center items-center">
+            <h2
+                class="font-['Poppins'] text-4xl font-extrabold text-center sm:text-7xl mb-6 text-orange-500 dark:text-slate-900">
+                Contacts
+            </h2>
+
+
+            <div class="relative container px-4 mx-auto ">
+                <p class="mb-20 text-lg text-gray-600 text-center font-medium md:max-w-lg mx-auto">Need help or have a
+                    question? Don't hesitate to reach out! Our team is
+                    ready and waiting to assist you. Contact us today and experience the top-notch
+                    customer service that sets us apart.</p>
+                <div class="flex flex-wrap -m-3">
+                    <div class="w-full md:w-1/3 p-3">
+                        <div
+                            class="p-11 h-full text-center bg-white bg-opacity-90 border border-blueGray-100 rounded-xl shadow-11xl">
+                            <div class="mb-6 relative mx-auto w-16 h-16 bg-orange-500 rounded-full">
+                                <img src="img/facebook.png" alt="" class="m-auto">
+                            </div>
+                            <h3 class="mb-3 text-xl font-bold font-heading leading-snug font-['Poppins']">facebook</h3>
+                            <p class="font-medium leading-relaxed">Burger Dungeon Official</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/3 p-3">
+                        <div
+                            class="p-11 h-full text-center bg-white bg-opacity-90 border border-blueGray-100 rounded-xl shadow-11xl">
+                            <div
+                                class="mb-6 relative mx-auto w-16 h-16 bg-white border border-blueGray-200 rounded-full">
+                                <img src="img/whatsapp.png" alt="">
+                            </div>
+                            <h3 class="font-['Poppins'] mb-3 text-xl font-bold font-heading leading-snug">WhatsApp</h3>
+                            <p class="font-medium leading-relaxed">+63 8408 412 569</p>
+                            <p class="font-medium leading-relaxed">+63 5356 213 545</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/3 p-3">
+                        <div
+                            class="p-11 h-full text-center bg-white bg-opacity-90 border border-blueGray-100 rounded-xl shadow-11xl">
+                            <div
+                                class="mb-6 relative mx-auto w-16 h-16 bg-white border border-blueGray-200 rounded-full">
+                                <img src="img/location-pin.png" alt="">
+                            </div>
+                            <h3 class="mb-3 text-xl font-bold font-heading leading-snug">Our Branches</h3>
+                            <p class="font-medium max-w-xs mx-auto leading-relaxed"> 139 Corporate Center, 139 Valero
+                                Street, Salcedo Village
+                                Makati City <br> <br>
+                                <hr class="py-2">
+                            </p>
+                            <p class="font-['Poppins'] font-medium max-w-xs mx-auto leading-relaxed">Anita Building
+                                1100, Quezon City</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END OF CONTACTS -->
+    </main>
+    <!-- END MAIN -->
+
+    <!-- FOOTER START -->
+    <footer class="p-4 bg-orange-900 rounded-lg shadow md:px-6 md:py-8 ">
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <a href="index.html" class="flex items-center mb-4 sm:mb-0">
+                <span class="self-center text-4xl font-bold whitespace-nowrap text-white font-['Poppins']"><span
+                        class="text-orange-500">bu</span>rger dungeon.</span>
+            </a>
+            <ul class="flex flex-wrap items-center mb-6 text-sm text-white sm:mb-0">
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+                </li>
+                <li>
+                    <a href="./admin/administrator.php" class="mr-4 hover:underline md:mr-6">Managing</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <hr class="my-6 border-white sm:mx-auto lg:my-8" />
+        <span class="block text-sm text-white sm:text-center dark:text-gray-400">©<a href=""
+                class="hover:underline">frdyrkuu</a>. All Rights Reserved.
+        </span>
+    </footer>
+    <!-- END FOOTER -->
+
+    <script src="script/modals.js"></script>
+</body>
+
+</html>

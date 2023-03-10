@@ -1,0 +1,16 @@
+a:hover {
+
+    color: rgb(255, 64, 0) !important;
+    text-decoration: none !important;
+}
+html{
+    scroll-behavior: smooth;
+}
+body.modal-open {
+    overflow: hidden;
+}
+
+body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(../img/wallpaper1.jpg);
+    background-size: cover;
+}
