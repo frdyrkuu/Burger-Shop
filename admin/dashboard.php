@@ -86,7 +86,7 @@ if (isset($_FILES['picture']) && isset($_POST['title'])) {
                     <?php echo "Welcome," . " " . $_SESSION['name']; ?>
                 </h2>
                 <div
-                    class="w-full h-96 sm:w-3/4 flex flex-col py-6 p-9 rounded-3xl m-auto sm:mt-5 items-center justify-center sm:text-sm  overflow-x-hidden">
+                    class="w-full h-96 sm:w-full flex flex-col py-6 p-9 rounded-3xl m-auto sm:mt-5 items-center justify-center sm:text-sm  overflow-x-hidden">
                     <div class="py-2 align-middle inline-block min-w-3/4 sm:px-6 -ml-6 lg:px-8 overflow-y-scroll">
                         <div class="shadow border-b border-gray-200 sm:rounded-lg  m-auto">
                             <table class="min-w-full divide-y divide-gray-200">
@@ -107,6 +107,18 @@ if (isset($_FILES['picture']) && isset($_POST['title'])) {
                                         <th scope="col"
                                             class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             Image
+                                        </th>
+                                        <th scope="col"
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            ID
+                                        </th>
+                                        <th scope="col"
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Edit
+                                        </th>
+                                        <th scope="col"
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Delete
                                         </th>
                                     </tr>
                                 </thead>
@@ -147,7 +159,7 @@ if (isset($_FILES['picture']) && isset($_POST['title'])) {
                     <div class="my-5 flex flex-col sm:flex-row">
                         <p class="font-['Poppins'] mt-1 ml-4">Product Title: </p>
                         <input type="text" name="title"
-                            class="font-['Poppins'] bg-gray-50 border border-gray-300 text-gray-900 ml-2 text-2xl rounded-lg block sm:w-80 w-full placeholder:p-2"
+                            class="font-['Poppins'] bg-gray-50 border pl-2 border-gray-300 text-gray-900 ml-2 text-2xl rounded-lg block sm:w-80 w-full placeholder:p-2"
                             placeholder="Enter Title" required>
 
                         <div class="font-['Poppins'] ml-2 sm:ml-6 mt-5 sm:mt-0">
@@ -165,7 +177,7 @@ if (isset($_FILES['picture']) && isset($_POST['title'])) {
 
                     <p class="font-['Poppins']">Product Description: </p>
                     <textarea type="text" name="desc"
-                        class="font-['Poppins'] bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg h-80 w-full sm:full"
+                        class="font-['Poppins'] bg-gray-50 border pl-2 border-gray-300 text-gray-900 text-lg rounded-lg h-80 w-full sm:full"
                         required></textarea>
                     <br>
                     <div class="-mt-2">

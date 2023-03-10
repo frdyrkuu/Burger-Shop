@@ -3,7 +3,7 @@
 $conn = mysqli_connect("localhost", "root", "", "burgershopdb");
 
 // Retrieve image path from database
-$sql = "SELECT `title`, `description`, `category`, `img` FROM `product_data` WHERE 1";
+$sql = "SELECT `id`, `title`, `description`, `category`, `img` FROM `product_data` WHERE 1";
 
 $result = mysqli_query($conn, $sql);
 
