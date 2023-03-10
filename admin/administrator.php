@@ -1,5 +1,5 @@
-<?php 
-    include 'check_auth.php';
+<?php
+include 'check_auth.php';
 ?>
 
 <!DOCTYPE html>
@@ -74,10 +74,6 @@
                             class="text-center bg-orange-500 text-white py-2 px-4 w-1/4  rounded-lg font-semibold mt-4 hover:bg-orange-300 focus:scale-95 transition-all duration-200 ease-out"
                             value="Login"></input>
 
-
-                        <div class="font-['Poppins'] mt-5 text-sm ">
-                            <a href="signup.php" class="text-gray-600 underline">Do you want to be an Admin?</a>
-                        </div>
                     </form>
                 </div>
 

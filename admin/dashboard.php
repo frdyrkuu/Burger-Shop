@@ -76,18 +76,27 @@ if (isset($_FILES['picture']) && isset($_POST['title'])) {
 
     <main class="max-w-14xl mx-auto">
 
-
-        <!-- SECTION FOR UPLOAD -->
-        <section class="h-1/2">
-            <div class="w-full sm:w-1/2 flex flex-col bg-white py-6 p-9 rounded-3xl shadow-2xl m-auto sm:mt-14">
-                <h1 class="font-['Poppins'] font-bold text-5xl text-center text-orange-500 px-4" id="product-title-1">
-                    Admin Dashboard
-                </h1>
-                <h2 class="font-['Poppins'] font-semibold text-3xl text-center text-orange-500 px-4 mt-5"
+        <section class="h-1/2 font-['Poppins'] my-5"  id="table">
+            <div
+                class="w-full sm:w-1/2 flex flex-col bg-white py-6 p-9 rounded-3xl shadow-2xl m-auto sm:mt-14 items-center justify-center">
+                <h1 class="text-4xl font-bold text-orange-500">Data Table</h1>
+                <h2 class="font-['Poppins'] font-semibold text-3xl text-center text-orange-500 px-4 my-5"
                     id="product-title-1">
                     <?php echo "Welcome," . " " . $_SESSION['name']; ?>
                 </h2>
-                <h2 class="font-['Poppins'] font-light text-2xl text-center text-orange-500 px-4">Upload Image Here</h2>
+            </div>
+        </section>
+
+
+        <!-- SECTION FOR UPLOAD -->
+        <section class="h-1/2" id="upload">
+            <div class="w-full sm:w-1/2 flex flex-col bg-white py-6 p-9 rounded-3xl shadow-2xl m-auto sm:mt-14">
+                <h1 class="font-['Poppins'] font-bold text-4xl text-center text-orange-500 px-4" id="product-title-1">
+                    Admin Dashboard
+                </h1>
+
+                <h2 class="font-['Poppins'] font-light text-2xl text-center text-orange-500 px-4">Upload Image Here
+                </h2>
                 <br>
                 <form id="upload-form" enctype="multipart/form-data" action="" method="POST">
 
@@ -97,7 +106,8 @@ if (isset($_FILES['picture']) && isset($_POST['title'])) {
                     <img id="output" class="my-10 rounded-2xl w-80 h-80 m-auto" src="../img/image-preview.png" />
 
 
-                    <h2 class="font-['Poppins'] font-bold text-2xl text-center text-orange-500 px-4">Edit your product
+                    <h2 class="font-['Poppins'] font-bold text-2xl text-center text-orange-500 px-4">Edit your
+                        product
                         details</h2>
 
                     <div class="my-5 flex flex-col sm:flex-row">
@@ -130,9 +140,12 @@ if (isset($_FILES['picture']) && isset($_POST['title'])) {
                             value="Submit"></input>
                     </div>
                 </form>
+
+                <div class="font-['Poppins'] m-auto text-sm mt-5">
+                    <a href="signup.php" class="text-gray-600 underline">Do you want to be an Admin?</a>
+                </div>
             </div>
         </section>
-
         <!-- END OF UPLOAD SECTION -->
 
     </main>
