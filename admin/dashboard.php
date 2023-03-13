@@ -14,6 +14,8 @@ if (isset($_FILES['picture']) && isset($_POST['title'])) {
     $desc = $_POST['desc'];
 
     if ($error === 0) {
+
+        // 10 MB
         if ($img_size > 10000000) {
             $em = "file too large.";
             header("Location: dashboard.php?error=$em");
@@ -35,6 +37,7 @@ if (isset($_FILES['picture']) && isset($_POST['title'])) {
         }
     }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -110,7 +113,7 @@ if (isset($_FILES['picture']) && isset($_POST['title'])) {
                                         </th>
                                         <th scope="col"
                                             class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                            ID
+                                            Product ID
                                         </th>
                                         <th scope="col"
                                             class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
