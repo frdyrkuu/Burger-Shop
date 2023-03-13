@@ -6,6 +6,7 @@ $(document).ready(function () {
             var jsonData = JSON.parse(response);
 
             let htmlTable = "";
+            let htmlID = "";
 
             for (let i = 0; i < jsonData.length; i++) {
                 const product = jsonData[i];
@@ -38,15 +39,12 @@ $(document).ready(function () {
                     </div>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
-                    <a href="/edit/${product.id}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                    <a href="editpage.php" id="edit-btn" class="text-indigo-600 hover:text-indigo-900">Edit</a>
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap">
-                    <form action="" method="POST">
-                        <input type="submit" name="delete" class="text-red-600 hover:text-red-900" value="Delete"></input>
-                    </form>
-                </td>
+                
             </tr>
-                `;
+            
+            `;
 
                 const tableDiv = document.getElementById("table");
                 tableDiv.innerHTML = htmlTable;

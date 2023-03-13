@@ -1,7 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['index.html','productlist.html','./admin/admin.php', './admin/dashboard.php',
-   './admin/administrator.php', './admin/signup.php', './script/display.js', './admin/display.js'],
+   './admin/administrator.php', './admin/signup.php', './script/display.js', './admin/display.js',
+  './admin/editpage.php'],
   theme: {
     extend: {
       keyframes: {
