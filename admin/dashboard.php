@@ -16,7 +16,7 @@ if (isset($_FILES['picture']) && isset($_POST['title'])) {
     if ($error === 0) {
 
         // 10 MB
-        if ($img_size > 10000000) {
+        if ($img_size > 20000000) {
             $em = "file too large.";
             header("Location: dashboard.php?error=$em");
 

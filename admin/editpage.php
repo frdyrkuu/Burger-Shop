@@ -112,6 +112,7 @@
                                         echo "<td class='px-6 py-4 whitespace-nowrap'>";
                                         echo "<form action='' method='POST'>";
                                         echo "<input type='hidden' name='id' value='" . $product['id'] . "'>";
+                                        echo "<input type='hidden' name='img' value='" . $product['img'] . "'>";
                                         echo "<input type='submit' name='delete' class='text-red-600 hover:text-red-900' value='Delete'></input>";
                                         echo "</form>";
                                         echo "</td>";
@@ -121,12 +122,14 @@
                                     // Handle delete requests
                                     if (isset($_POST['delete'])) {
                                         $id = $_POST['id'];
+                                        $img = $_POST['img'];
                                         $sql = "DELETE FROM product_data WHERE id = $id";
-                                        unlink($product['img']);
+                                        
+                                        unlink($img);
+
                                         mysqli_query($conn, $sql);
                                         echo '<script>
                                         alert("Deleted")</script>';
-                                        header("Location: dashboard.php");
                                     }
                                     ?>
                                 </tbody>
