@@ -19,13 +19,13 @@ $(document).ready(function () {
                     </div>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
-                    <div class="text-sm text-gray-500">
+                    <div class="text-sm text-gray-500 whitespace-wrap">
                         ${product.description}
                     </div>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
                     <div class="text-sm text-gray-500">
-                        ${product.category}
+                    ${product.category}
                     </div>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">

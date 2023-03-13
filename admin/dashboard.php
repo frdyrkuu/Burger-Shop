@@ -90,7 +90,7 @@ if (isset($_FILES['picture']) && isset($_POST['title'])) {
                 </h2>
                 <div
                     class="w-full h-96 sm:w-full  flex-col py-6 p-9 rounded-3xl m-auto sm:mt-5 items-center justify-center sm:text-sm  overflow-x-hidden hidden sm:flex">
-                    <div class="py-2 align-middle inline-block min-w-3/4 sm:px-6 -ml-6 lg:px-8 overflow-y-scroll">
+                    <div class="py-2 align-middle inline-block min-w-3/4 sm:px-6 -ml-6 lg:px-8 overflow-y-scroll w-full">
                         <div class="shadow border-b border-gray-200 sm:rounded-lg  m-auto">
                             <table class="min-w-full divide-y divide-gray-200">
                                 <thead class="bg-gray-50">

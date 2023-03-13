@@ -124,8 +124,9 @@
                                         $id = $_POST['id'];
                                         $img = $_POST['img'];
                                         $sql = "DELETE FROM product_data WHERE id = $id";
-                                        
-                                        unlink($img);
+                                        error_reporting(0);
+
+                                        unlink('../upload/'.$img);
 
                                         mysqli_query($conn, $sql);
                                         echo '<script>
