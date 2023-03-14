@@ -1127,12 +1127,20 @@ video {
   padding: 2.75rem;
 }
 
+.p-2{
+  padding: 0.5rem;
+}
+
 .p-3{
   padding: 0.75rem;
 }
 
 .p-4{
   padding: 1rem;
+}
+
+.p-5{
+  padding: 1.25rem;
 }
 
 .p-6{
@@ -1200,6 +1208,10 @@ video {
 
 .font-\[\'Poppins\'\]{
   font-family: 'Poppins';
+}
+
+.font-\[Poppins\]{
+  font-family: Poppins;
 }
 
 .text-2xl{
@@ -1319,6 +1331,11 @@ video {
 .text-orange-900{
   --tw-text-opacity: 1;
   color: rgb(124 45 18 / var(--tw-text-opacity));
+}
+
+.text-purple-600{
+  --tw-text-opacity: 1;
+  color: rgb(147 51 234 / var(--tw-text-opacity));
 }
 
 .text-red-600{
