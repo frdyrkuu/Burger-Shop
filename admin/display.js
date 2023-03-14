@@ -18,8 +18,8 @@ $(document).ready(function () {
                         ${product.title}
                     </div>
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap">
-                    <div class="text-sm text-gray-500 whitespace-wrap">
+                <td class="px-6 py-4 truncate">
+                    <div class="text-sm text-gray-500">
                         ${product.description}
                     </div>
                 </td>

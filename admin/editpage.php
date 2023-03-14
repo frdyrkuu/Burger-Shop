@@ -112,7 +112,7 @@ if (isset($_POST['update'])) {
                                         echo $product['title'];
                                         echo "</div>";
                                         echo "</td>";
-                                        echo "<td class='px-6 py-4 whitespace-nowrap'>";
+                                        echo "<td class='px-6 py-4 truncate'>";
                                         echo "<div class='text-sm text-gray-500'>";
                                         echo $product['description'];
                                         echo "</div>";
