@@ -165,8 +165,6 @@ if (isset($_POST['update'])) {
                                         exit();
                                     }
 
-                                    // Handle delete requests
-                                    
                                     ?>
                                 </tbody>
                             </table>
@@ -195,20 +193,16 @@ if (isset($_POST['update'])) {
                 <img src='../upload/$img' alt='' class='w-1/4 h-1/4'></img>
                 </div>";
             echo "<p class='text-orange-500 text-xl font-bold my-5'>Product ID: $id</p>";
-            echo "<input type='hidden' name='id' value='" . $id . "'>";
+            echo "<input type='hidden' name='id' value='" . $id . "' required>";
             echo "<label class='my-2'>Title</label>";
             echo "<input type='text' name='newtitle' class='font-[Poppins] bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg block w-1/2 p-2' value='$title'></input>";
             echo "<label class='my-2'>Description</label>";
-            echo "<textarea type='text' name='newdesc' class='font-[Poppins] bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg block w-3/4 p-5 h-96'>$description</textarea>";
+            echo "<textarea type='text' name='newdesc' class='font-[Poppins] bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg block w-3/4 p-5 h-96' required>$description</textarea>";
             echo "<input type='submit' name='update'
                 class='bg-orange-500 text-white py-2 px-4 w-full sm:w-1/4 rounded-lg font-semibold mt-4 hover:bg-orange-300 focus:scale-95 transition-all duration-200 ease-out'
                 value='Submit'></input>";
             echo "</form>";
             echo "</div>";
-
-
-
-
 
         }
         ?>

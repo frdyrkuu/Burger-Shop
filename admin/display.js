@@ -18,7 +18,7 @@ $(document).ready(function () {
                         ${product.title}
                     </div>
                 </td>
-                <td class="px-6 py-4 truncate">
+                <td class="px-6 py-4">
                     <div class="text-sm text-gray-500">
                         ${product.description}
                     </div>
