@@ -56,15 +56,14 @@ include 'check_auth.php';
                 <div class="items-center m-auto">
 
                     <form action="admin.php" method="POST" id="login-form">
-                        <label for="first_name"
-                            class="block mb-2 text-xl font-medium text-gray-900 dark:text-white">Enter
+                        <label for="first_name" class="block mb-2 text-xl font-medium text-gray-900">Enter
                             Username</label>
                         <input type="text" name="username" id="username"
                             class="font-['Poppins'] bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg block sm:w-11/12 w-11/12"
                             placeholder="Username" required>
 
                         <label for="first_name"
-                            class="font-['Poppins'] block mb-2 text-xl font-medium text-gray-900 dark:text-white">Enter
+                            class="font-['Poppins'] block mb-2 text-xl font-medium text-gray-900">Enter
                             Password</label>
                         <input type="password" name="password" id="password"
                             class="font-['Poppins'] bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg block w-11/12 sm:w-11/12"
